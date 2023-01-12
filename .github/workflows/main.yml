@@ -15,7 +15,7 @@ jobs:
 
     - name: Edit file
       run: |
-        sed -i 's/Innoweave/deepaksharma/g' test2.txt
+        sed -i 's/Innoweave/Innoweave biocare pvt ltd/g' test2.txt
         
     - name: Commit and push changes
       run: |
