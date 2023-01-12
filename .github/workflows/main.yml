@@ -1,0 +1,25 @@
+name: Update File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Edit file
+      run: |
+        sed -i 's/Innoweave/deepaksharma/g' test2.txt
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "deepaksharma848586@gmail.com"
+        git config --local user.name "Deepakkumar2102"
+        git commit -am "Update file content"
+        git push
